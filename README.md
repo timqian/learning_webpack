@@ -1,6 +1,6 @@
 ## webpack 基本用法
 
-参考：http://webpack.github.io/docs/tutorials/getting-started/
+http://webpack.github.io/docs/tutorials/getting-started/
 
 ### install
 
@@ -13,16 +13,19 @@
 ### load css file 
 
 条件：
-Create a empty node_modules folder. Run npm install css-loader style-loader inside the floder.
+
+1. Create a empty node_modules folder. 
+2. Run npm install css-loader style-loader inside the floder.
+3. 
 
 	require("!style!css!./style.css"); //in entry.js
 
-或者better：
+或者 better：
 
 	require("./style.css"); //in entry.js
 	webpack ./entry.js bundle.js --module-bind 'css=style!css'  //in commend line
 
-### 在 config file 中配置
+### * 在 config file 中配置
 
 	module.exports = {
 	    entry: "./entry.js",
@@ -40,7 +43,7 @@ Create a empty node_modules folder. Run npm install css-loader style-loader insi
 
 	webpack  //命令
 
-### 方便查看变更：watch mode 以及 dev－server mode
+### * 方便查看变更：watch mode 以及 dev－server mode
 
 	webpack --progress --colors --watch
 	webpack-dev-server --progress --colors //(需要npm install webpack-dev-server -g)
